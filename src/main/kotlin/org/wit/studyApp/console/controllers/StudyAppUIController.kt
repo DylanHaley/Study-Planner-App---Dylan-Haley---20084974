@@ -2,55 +2,96 @@ package org.wit.studyApp.console.controllers
 
 import javafx.application.Platform.runLater
 import mu.KotlinLogging
+import org.wit.studyApp.console.models.ExamJSONStore
 import org.wit.studyApp.console.models.StudyAppJSONStore
 import org.wit.studyApp.console.models.StudyAppModel
-import org.wit.studyApp.console.views.AddStudyAppScreen
-import org.wit.studyApp.console.views.ListAssignmentScreen
-import org.wit.studyApp.console.views.MenuScreen
+import org.wit.studyApp.console.views.*
 import tornadofx.*
 
 class StudyAppUIController : Controller() {
 
-    val placemarks = StudyAppJSONStore()
+    val assignments = StudyAppJSONStore()
+    val exams = ExamJSONStore()
     val logger = KotlinLogging.logger {}
 
     init {
         logger.info { "Launching Study Planner TornadoFX UI App" }
     }
-    fun add(_title : String, _date : String){
+    fun addAssignment(_title : String, _date : String){
 
         var aPlacemark = StudyAppModel(title = _title, Date = _date)
-        placemarks.create(aPlacemark)
-        logger.info("Assignment Added")
+        assignments.create(aPlacemark)
+        logger.info("Added")
     }
 
-    fun loadListScreen() {
+    // Assignment functions
+    fun loadListAssignmentScreen() {
         runLater {
             find(MenuScreen::class).replaceWith(ListAssignmentScreen::class, sizeToScene = true, centerOnScreen = true)
         }
-        placemarks.logAll()
+        assignments.logAll()
     }
 
-    fun loadAddScreen() {
+    fun loadAddAssignmentScreen() {
         runLater {
-            find(MenuScreen::class).replaceWith(AddStudyAppScreen::class, sizeToScene = true, centerOnScreen = true)
+            find(MenuScreen::class).replaceWith(AddAssignmentScreen::class, sizeToScene = true, centerOnScreen = true)
         }
     }
 
-    fun loadDeleteScreen() {
+    fun loadDeleteAssignmentScreen() {
         runLater {
-            find(MenuScreen::class).replaceWith(AddStudyAppScreen::class, sizeToScene = true, centerOnScreen = true)
+            find(MenuScreen::class).replaceWith(DeleteAssignmentScreen::class, sizeToScene = true, centerOnScreen = true)
         }
     }
 
-    fun closeAdd() {
+    fun closeAddAssignment() {
         runLater {
-            find(AddStudyAppScreen::class).replaceWith(MenuScreen::class, sizeToScene = true, centerOnScreen = true)
+            find(AddAssignmentScreen::class).replaceWith(MenuScreen::class, sizeToScene = true, centerOnScreen = true)
         }
     }
-    fun closeList() {
+
+    fun closeListAssignment() {
         runLater {
             find(ListAssignmentScreen::class).replaceWith(MenuScreen::class, sizeToScene = true, centerOnScreen = true)
+        }
+    }
+
+    fun closeDeleteAssignment() {
+        runLater {
+            find(ListAssignmentScreen::class).replaceWith(MenuScreen::class, sizeToScene = true, centerOnScreen = true)
+        }
+    }
+
+    //Exam functions
+    fun addExam(_title : String, _date : String){
+
+        var aPlacemark = StudyAppModel(title = _title, Date = _date)
+        exams.create(aPlacemark)
+        logger.info("Added")
+    }
+
+    fun loadAddExamScreen() {
+        runLater {
+            find(MenuScreen::class).replaceWith(AddExamScreen::class, sizeToScene = true, centerOnScreen = true)
+        }
+    }
+
+    fun closeExamAdd() {
+        runLater {
+            find(AddExamScreen::class).replaceWith(MenuScreen::class, sizeToScene = true, centerOnScreen = true)
+        }
+    }
+
+    fun loadListExamScreen() {
+        runLater {
+            find(MenuScreen::class).replaceWith(ListExamScreen::class, sizeToScene = true, centerOnScreen = true)
+        }
+        exams.logAll()
+    }
+
+    fun closeListExam() {
+        runLater {
+            find(ListExamScreen::class).replaceWith(MenuScreen::class, sizeToScene = true, centerOnScreen = true)
         }
     }
 

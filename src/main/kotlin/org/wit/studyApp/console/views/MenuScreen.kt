@@ -10,7 +10,7 @@ class MenuScreen : View("Study Planner App") {
     val assignmentUIController: StudyAppUIController by inject()
 
     override val root = form {
-        setPrefSize(400.0, 200.0)
+        setPrefSize(600.0, 400.0)
         fieldset(labelPosition = Orientation.VERTICAL) {
             text("")
             button("Add Assignment Due Date") {
@@ -19,7 +19,18 @@ class MenuScreen : View("Study Planner App") {
                 useMaxWidth = true
                 action {
                     runAsyncWithProgress {
-                        assignmentUIController.loadAddScreen()
+                        assignmentUIController.loadAddAssignmentScreen()
+                    }
+                }
+            }
+            text("")
+            button("Add Exam Due Date") {
+
+                isDefaultButton = true
+                useMaxWidth = true
+                action {
+                    runAsyncWithProgress {
+                        assignmentUIController.loadAddExamScreen()
                     }
                 }
             }
@@ -30,7 +41,18 @@ class MenuScreen : View("Study Planner App") {
                 useMaxWidth = true
                 action {
                     runAsyncWithProgress {
-                        assignmentUIController.loadListScreen()
+                        assignmentUIController.loadListAssignmentScreen()
+                    }
+                }
+            }
+            text("")
+            button("List Exams") {
+
+                isDefaultButton = true
+                useMaxWidth = true
+                action {
+                    runAsyncWithProgress {
+                        assignmentUIController.loadListExamScreen()
                     }
                 }
             }
@@ -41,7 +63,7 @@ class MenuScreen : View("Study Planner App") {
                 useMaxWidth = true
                 action {
                     runAsyncWithProgress {
-                        assignmentUIController.loadListScreen()
+                        assignmentUIController.loadDeleteAssignmentScreen()
                     }
                 }
             }
