@@ -68,6 +68,17 @@ class MenuScreen : View("Study Planner App") {
                 }
             }
             text("")
+            button("Search Assignments") {
+
+                isDefaultButton = true
+                useMaxWidth = true
+                action {
+                    runAsyncWithProgress {
+                        assignmentUIController.loadSearchAssignmentScreen()
+                    }
+                }
+            }
+            text("")
             button("Exit") {
 
                 isDefaultButton = true

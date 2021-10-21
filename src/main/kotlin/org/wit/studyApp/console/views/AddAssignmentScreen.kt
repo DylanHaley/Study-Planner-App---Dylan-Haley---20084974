@@ -4,8 +4,6 @@ import javafx.beans.property.SimpleStringProperty
 import javafx.geometry.Orientation
 import org.wit.studyApp.console.controllers.StudyAppUIController
 import tornadofx.*
-import tornadofx.Stylesheet.Companion.form
-import javax.swing.text.View
 
  class AddAssignmentScreen : tornadofx.View("Add Assignments") {
     val model = ViewModel()
@@ -20,19 +18,19 @@ import javax.swing.text.View
                 textfield(_title).required()
             }
             field("Date") {
-                textarea(_date).required()
+                textfield(_date).required()
             }
-            button("Add") {
-                enableWhen(model.valid)
-                isDefaultButton = true
-                useMaxWidth = true
-                action {
-                    runAsyncWithProgress {
-                        assignmentkUIController.addAssignment(_title.toString(),_date.toString())
+                button("Add") {
+                    enableWhen(model.valid)
+                    isDefaultButton = true
+                    useMaxWidth = true
+                    action {
+                        runAsyncWithProgress {
+                            assignmentkUIController.addAssignment(_title.toString(), _date.toString())
 
+                        }
                     }
                 }
-            }
             button("Close") {
                 useMaxWidth = true
                 action {

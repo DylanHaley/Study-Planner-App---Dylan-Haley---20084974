@@ -63,5 +63,15 @@
     "id": -6316237635469732007,
     "title": "StringProperty [bean: tornadofx.ViewModel@50779d62, value: TestExam3]",
     "Date": "StringProperty [bean: tornadofx.ViewModel@50779d62, value: TestDate]"
+  },
+  {
+    "id": -3563220701171480006,
+    "title": "StringProperty [bean: tornadofx.ViewModel@78ae3796, value: TEST20]",
+    "Date": "StringProperty [bean: tornadofx.ViewModel@78ae3796, value: TESTDATE20]"
+  },
+  {
+    "id": 6707932165016482918,
+    "title": "StringProperty [bean: tornadofx.ViewModel@d721005, value: TestAssignment28]",
+    "Date": "StringProperty [bean: tornadofx.ViewModel@d721005, value: TestDate28]"
   }
 ]

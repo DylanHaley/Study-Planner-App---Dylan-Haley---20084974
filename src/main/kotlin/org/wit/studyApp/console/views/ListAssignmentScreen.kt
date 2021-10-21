@@ -12,7 +12,7 @@ class ListAssignmentScreen : View("List Assignments") {
 
 
     override val root = vbox {
-        setPrefSize(600.0, 200.0)
+        setPrefSize(600.0, 400.0)
         tableview(data) {
             readonlyColumn("ID", StudyAppModel::id)
             readonlyColumn("TITLE", StudyAppModel::title)

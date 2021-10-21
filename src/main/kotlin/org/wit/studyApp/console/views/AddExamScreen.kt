@@ -18,7 +18,7 @@ class AddExamScreen : tornadofx.View("Add Exams") {
                 textfield(_title).required()
             }
             field("Date") {
-                textarea(_date).required()
+                textfield(_date).required()
             }
             button("Add") {
                 enableWhen(model.valid)

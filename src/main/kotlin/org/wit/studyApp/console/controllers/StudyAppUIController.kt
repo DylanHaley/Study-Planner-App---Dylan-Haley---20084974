@@ -3,14 +3,14 @@ package org.wit.studyApp.console.controllers
 import javafx.application.Platform.runLater
 import mu.KotlinLogging
 import org.wit.studyApp.console.models.ExamJSONStore
-import org.wit.studyApp.console.models.StudyAppJSONStore
+import org.wit.studyApp.console.models.AssignmentJSONStore
 import org.wit.studyApp.console.models.StudyAppModel
 import org.wit.studyApp.console.views.*
 import tornadofx.*
 
 class StudyAppUIController : Controller() {
 
-    val assignments = StudyAppJSONStore()
+    val assignments = AssignmentJSONStore()
     val exams = ExamJSONStore()
     val logger = KotlinLogging.logger {}
 
@@ -24,7 +24,6 @@ class StudyAppUIController : Controller() {
         logger.info("Added")
     }
 
-    // Assignment functions
     fun loadListAssignmentScreen() {
         runLater {
             find(MenuScreen::class).replaceWith(ListAssignmentScreen::class, sizeToScene = true, centerOnScreen = true)
@@ -56,11 +55,28 @@ class StudyAppUIController : Controller() {
         }
     }
 
-    fun closeDeleteAssignment() {
+    fun deleteAssignment(){
+        logger.info("Deleted")
+    }
+
+    fun searchAssignments(_id : Long){
+        var aPlacemark = _id
+        assignments.findOne(aPlacemark)
+        logger.info("Searching")
+    }
+
+    fun loadSearchAssignmentScreen() {
         runLater {
-            find(ListAssignmentScreen::class).replaceWith(MenuScreen::class, sizeToScene = true, centerOnScreen = true)
+            find(MenuScreen::class).replaceWith(SearchAssignmentScreen::class, sizeToScene = true, centerOnScreen = true)
         }
     }
+
+    fun closeDeleteAssignment() {
+        runLater {
+            find(DeleteAssignmentScreen::class).replaceWith(MenuScreen::class, sizeToScene = true, centerOnScreen = true)
+        }
+    }
+
 
     //Exam functions
     fun addExam(_title : String, _date : String){

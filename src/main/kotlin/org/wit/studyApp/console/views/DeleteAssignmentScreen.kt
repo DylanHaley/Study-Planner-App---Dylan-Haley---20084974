@@ -8,21 +8,23 @@ class DeleteAssignmentScreen : View("Delete Assignments") {
 
     val assignmentUIController: StudyAppUIController by inject()
     val tableContent = assignmentUIController.exams.findAll()
-    val data = tableContent.observable()
 
 
     override val root = vbox {
         setPrefSize(600.0, 200.0)
-        tableview(data) {
-            readonlyColumn("ID", StudyAppModel::id)
-            readonlyColumn("TITLE", StudyAppModel::title)
-            readonlyColumn("DATE", StudyAppModel::Date)
+        button("Delete Assignment JSON") {
+            useMaxWidth = true
+            action {
+                runAsyncWithProgress {
+                    assignmentUIController.closeListAssignment()
+                }
+            }
         }
         button("Close") {
             useMaxWidth = true
             action {
                 runAsyncWithProgress {
-                    assignmentUIController.closeListAssignment()
+                    assignmentUIController.closeDeleteAssignment()
                 }
             }
         }

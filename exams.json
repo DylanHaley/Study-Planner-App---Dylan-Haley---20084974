@@ -3,5 +3,10 @@
     "id": 2557070026340765594,
     "title": "StringProperty [bean: tornadofx.ViewModel@6485fe3c, value: ExamTest4]",
     "Date": "StringProperty [bean: tornadofx.ViewModel@6485fe3c, value: TestDate4]"
+  },
+  {
+    "id": -6031683360819215113,
+    "title": "StringProperty [bean: tornadofx.ViewModel@3d2468f0, value: ExamTest6]",
+    "Date": "StringProperty [bean: tornadofx.ViewModel@3d2468f0, value: ExamDateTest6]"
   }
 ]

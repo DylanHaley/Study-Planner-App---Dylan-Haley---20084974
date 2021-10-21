@@ -1,10 +1,5 @@
 package org.wit.studyApp.console.views
 
-
-import javafx.beans.property.SimpleObjectProperty
-import javafx.collections.FXCollections
-import javafx.scene.control.TableView
-import javafx.scene.layout.GridPane
 import org.wit.studyApp.console.controllers.StudyAppUIController
 import org.wit.studyApp.console.models.StudyAppModel
 import tornadofx.*
@@ -17,7 +12,7 @@ class ListExamScreen : View("List Assignments") {
 
 
     override val root = vbox {
-        setPrefSize(600.0, 200.0)
+        setPrefSize(600.0, 400.0)
         tableview(data) {
             readonlyColumn("ID", StudyAppModel::id)
             readonlyColumn("TITLE", StudyAppModel::title)
@@ -27,7 +22,7 @@ class ListExamScreen : View("List Assignments") {
             useMaxWidth = true
             action {
                 runAsyncWithProgress {
-                    assignmentUIController.closeListAssignment()
+                    assignmentUIController.closeListExam()
                 }
             }
         }

@@ -18,7 +18,7 @@ fun generateRandomId(): Long {
     return Random().nextLong()
 }
 
-class StudyAppJSONStore : StudyAppStore {
+class AssignmentJSONStore : StudyAppStore {
 
     var assignments = mutableListOf<StudyAppModel>()
 
