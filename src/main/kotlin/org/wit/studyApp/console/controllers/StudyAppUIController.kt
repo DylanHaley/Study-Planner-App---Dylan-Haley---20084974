@@ -4,6 +4,7 @@ import javafx.application.Platform.runLater
 import mu.KotlinLogging
 import org.wit.studyApp.console.models.ExamJSONStore
 import org.wit.studyApp.console.models.AssignmentJSONStore
+import org.wit.studyApp.console.models.JSON_FILE
 import org.wit.studyApp.console.models.StudyAppModel
 import org.wit.studyApp.console.views.*
 import tornadofx.*
@@ -56,13 +57,12 @@ class StudyAppUIController : Controller() {
     }
 
     fun deleteAssignment(){
+//        assignments.delete()
         logger.info("Deleted")
     }
 
-    fun searchAssignments(_id : Long){
-        var aPlacemark = _id
-        assignments.findOne(aPlacemark)
-        logger.info("Searching")
+    fun searchAssignments(id: Long) {
+//        assignments.findOne(id)
     }
 
     fun loadSearchAssignmentScreen() {

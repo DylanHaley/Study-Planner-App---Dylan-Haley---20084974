@@ -26,13 +26,12 @@ class StudyAppController {
                 2 -> update()
                 3 -> list()
                 4 -> search()
-                -99 -> dummyData()
                 -1 -> println("Exiting App")
                 else -> println("Invalid Option")
             }
             println()
         } while (input != -1)
-        logger.info { "Shutting Down Placemark Console App" }
+        logger.info { "Shutting Down Study App Console App" }
     }
 
     fun menu() :Int { return assignmentView.menu() }
@@ -43,7 +42,7 @@ class StudyAppController {
         if (assignmentView.addAssignmentPlacemarkData(aPlacemark))
             assignments.create(aPlacemark)
         else
-            logger.info("Placemark Not Added")
+            logger.info("Assignment Not Added")
     }
 
     fun list() {
@@ -60,13 +59,13 @@ class StudyAppController {
             if(assignmentView.updateAssignmentPlacemarkData(aPlacemark)) {
                 assignments.update(aPlacemark)
                 assignmentView.showAssignmentPlacemark(aPlacemark)
-                logger.info("Placemark Updated : [ $aPlacemark ]")
+                logger.info("Assignment Updated : [ $aPlacemark ]")
             }
             else
-                logger.info("Placemark Not Updated")
+                logger.info("Assignment Not Updated")
         }
         else
-            println("Placemark Not Updated...")
+            println("Assignment Not Updated...")
     }
 
     fun search() {
@@ -78,11 +77,5 @@ class StudyAppController {
     fun search(id: Long) : StudyAppModel? {
         var foundPlacemark = assignments.findOne(id)
         return foundPlacemark
-    }
-
-    fun dummyData() {
-        assignments.create(StudyAppModel(title = "New York New York", Date = "So Good They Named It Twice"))
-        assignments.create(StudyAppModel(title= "Ring of Kerry", Date = "Some place in the Kingdom"))
-        assignments.create(StudyAppModel(title = "Waterford City", Date = "You get great Blaas Here!!"))
     }
 }

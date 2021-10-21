@@ -22,9 +22,11 @@ class SearchAssignmentScreen : View("Search Assignments") {
                 enableWhen(model.valid)
                 isDefaultButton = true
                 useMaxWidth = true
-                action {
-                    runAsyncWithProgress {
-                        assignmentUIController.searchAssignments(id.toLong())
+                if (id != null) {
+                    action {
+                        runAsyncWithProgress {
+//                            assignmentUIController.searchAssignments(id)
+                        }
                     }
                 }
             }

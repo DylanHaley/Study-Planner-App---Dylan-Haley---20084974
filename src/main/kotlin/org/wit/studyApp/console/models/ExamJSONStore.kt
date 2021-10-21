@@ -14,7 +14,7 @@ val JSON_FILE2 = "exams.json"
 val gsonBuilder2 = GsonBuilder().setPrettyPrinting().create()
 val listType2 = object : TypeToken<java.util.ArrayList<StudyAppModel>>() {}.type
 
-fun generateRandomIdExam(): Long {
+fun generateRandomIdExam(): Long? {
     return Random().nextLong()
 }
 

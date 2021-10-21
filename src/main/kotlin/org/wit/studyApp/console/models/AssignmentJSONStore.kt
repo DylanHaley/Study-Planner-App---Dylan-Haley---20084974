@@ -43,6 +43,11 @@ class AssignmentJSONStore : StudyAppStore {
         serialize()
     }
 
+//     fun delete() {
+//        assignments.clear()
+//         serialize()
+//    }
+
     override fun update(assignemnt: StudyAppModel) {
         var foundAssignment = findOne(assignemnt.id!!)
         if (foundAssignment != null) {

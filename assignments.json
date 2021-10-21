@@ -1,77 +1,22 @@
 [
   {
-    "id": -2718880853468689715,
-    "title": "test15",
-    "Date": "testing15"
+    "id": -1629357924368228125,
+    "title": "StringProperty [bean: tornadofx.ViewModel@61c267c5, value: test28]",
+    "Date": "StringProperty [bean: tornadofx.ViewModel@61c267c5, value: test28]"
   },
   {
-    "id": -5515754493775215825,
-    "title": "testAssignment",
-    "Date": "20/20/20"
+    "id": 7737421325657663202,
+    "title": "StringProperty [bean: tornadofx.ViewModel@1f250e2, value: test30]",
+    "Date": "StringProperty [bean: tornadofx.ViewModel@1f250e2, value: test30]"
   },
   {
-    "id": -4870137391087021042,
-    "title": "StringProperty [bean: tornadofx.ViewModel@6b602a39, value: AssignmentTest12]",
-    "Date": "StringProperty [bean: tornadofx.ViewModel@6b602a39, value: 07/07/2000]"
+    "id": 6712081292797164317,
+    "title": "StringProperty [bean: tornadofx.ViewModel@1f250e2, value: test30]",
+    "Date": "StringProperty [bean: tornadofx.ViewModel@1f250e2, value: test30]"
   },
   {
-    "id": 582939845786248267,
-    "title": "StringProperty [bean: tornadofx.ViewModel@6b602a39, value: AssignmentTest12]",
-    "Date": "StringProperty [bean: tornadofx.ViewModel@6b602a39, value: 07/07/2000]"
-  },
-  {
-    "id": 7657656210193367896,
-    "title": "StringProperty [bean: tornadofx.ViewModel@6b602a39, value: AssignmentTest12]",
-    "Date": "StringProperty [bean: tornadofx.ViewModel@6b602a39, value: 07/07/2000]"
-  },
-  {
-    "id": -6321255824439306196,
-    "title": "StringProperty [bean: tornadofx.ViewModel@6b602a39, value: AssignmentTest12]",
-    "Date": "StringProperty [bean: tornadofx.ViewModel@6b602a39, value: 07/07/2000]"
-  },
-  {
-    "id": -5561079574256988586,
-    "title": "StringProperty [bean: tornadofx.ViewModel@6b602a39, value: AssignmentTest12]",
-    "Date": "StringProperty [bean: tornadofx.ViewModel@6b602a39, value: 07/07/2000]"
-  },
-  {
-    "id": -6497411971698973886,
-    "title": "StringProperty [bean: tornadofx.ViewModel@2580f6e4, value: Mobile App Assignment 1]",
-    "Date": "StringProperty [bean: tornadofx.ViewModel@2580f6e4, value: 22/10/21]"
-  },
-  {
-    "id": -7264214939008950655,
-    "title": "StringProperty [bean: tornadofx.ViewModel@617bdecd, value: test21]",
-    "Date": "StringProperty [bean: tornadofx.ViewModel@617bdecd, value: testDate21]"
-  },
-  {
-    "id": -501727280405465387,
-    "title": "StringProperty [bean: tornadofx.ViewModel@73058754, value: test23]",
-    "Date": "StringProperty [bean: tornadofx.ViewModel@73058754, value: testDate23]"
-  },
-  {
-    "id": 998978597955327259,
-    "title": "StringProperty [bean: tornadofx.ViewModel@3115196a, value: MobileAppTest3]",
-    "Date": "StringProperty [bean: tornadofx.ViewModel@3115196a, value: 01/11/21]"
-  },
-  {
-    "id": 7499192850319930550,
-    "title": "StringProperty [bean: tornadofx.ViewModel@4d98953e, value: ExamTest1]",
-    "Date": "StringProperty [bean: tornadofx.ViewModel@4d98953e, value: 00/00/00]"
-  },
-  {
-    "id": -6316237635469732007,
-    "title": "StringProperty [bean: tornadofx.ViewModel@50779d62, value: TestExam3]",
-    "Date": "StringProperty [bean: tornadofx.ViewModel@50779d62, value: TestDate]"
-  },
-  {
-    "id": -3563220701171480006,
-    "title": "StringProperty [bean: tornadofx.ViewModel@78ae3796, value: TEST20]",
-    "Date": "StringProperty [bean: tornadofx.ViewModel@78ae3796, value: TESTDATE20]"
-  },
-  {
-    "id": 6707932165016482918,
-    "title": "StringProperty [bean: tornadofx.ViewModel@d721005, value: TestAssignment28]",
-    "Date": "StringProperty [bean: tornadofx.ViewModel@d721005, value: TestDate28]"
+    "id": -3323807170532892586,
+    "title": "StringProperty [bean: tornadofx.ViewModel@1f250e2, value: test30]",
+    "Date": "StringProperty [bean: tornadofx.ViewModel@1f250e2, value: test30]"
   }
 ]

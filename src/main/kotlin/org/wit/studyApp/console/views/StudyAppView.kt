@@ -1,8 +1,6 @@
 package org.wit.studyApp.console.views
 
-import org.wit.studyApp.console.main.assignments
 import org.wit.studyApp.console.models.AssignmentJSONStore
-import org.wit.studyApp.console.models.AssignmentMemStore
 import org.wit.studyApp.console.models.StudyAppModel
 
 class StudyAppView {
