@@ -11,8 +11,9 @@ class ListAssignmentScreen : View("List Assignments") {
     val data = tableContent.observable()
 
 
+    //Lists all assignment due dates that are currently in the list
     override val root = vbox {
-        setPrefSize(600.0, 400.0)
+        setPrefSize(1200.0, 400.0)
         tableview(data) {
             readonlyColumn("ID", StudyAppModel::id)
             readonlyColumn("TITLE", StudyAppModel::title)

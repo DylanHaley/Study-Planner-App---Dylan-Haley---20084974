@@ -11,6 +11,7 @@ import tornadofx.*
     val _date= model.bind { SimpleStringProperty() }
     val assignmentkUIController: StudyAppUIController by inject()
 
+     //Creates form for user to input and add a new assignment due date, was unable to get a datepicker to work so used the textfield as used in labs
     override val root = form {
         setPrefSize(600.0, 200.0)
         fieldset(labelPosition = Orientation.VERTICAL) {

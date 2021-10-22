@@ -8,5 +8,20 @@
     "id": -6031683360819215113,
     "title": "StringProperty [bean: tornadofx.ViewModel@3d2468f0, value: ExamTest6]",
     "Date": "StringProperty [bean: tornadofx.ViewModel@3d2468f0, value: ExamDateTest6]"
+  },
+  {
+    "id": -5484481106157245326,
+    "title": "StringProperty [bean: tornadofx.ViewModel@69040db2, value: test40]",
+    "Date": "StringProperty [bean: tornadofx.ViewModel@69040db2, value: test40]"
+  },
+  {
+    "id": 1355017503561993638,
+    "title": "StringProperty [bean: tornadofx.ViewModel@69040db2, value: test40]",
+    "Date": "StringProperty [bean: tornadofx.ViewModel@69040db2, value: test40]"
+  },
+  {
+    "id": -1570742839097157348,
+    "title": "StringProperty [bean: tornadofx.ViewModel@69040db2, value: test40]",
+    "Date": "StringProperty [bean: tornadofx.ViewModel@69040db2, value: test40]"
   }
 ]

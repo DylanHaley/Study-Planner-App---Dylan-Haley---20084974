@@ -28,26 +28,31 @@ class AssignmentJSONStore : StudyAppStore {
         }
     }
 
+    //returns everything in assignment list
     override fun findAll(): MutableList<StudyAppModel> {
         return assignments
     }
 
+    //returns one specfic item from assignment list
     override fun findOne(id: Long) : StudyAppModel? {
         var foundAssignment: StudyAppModel? = assignments.find { p -> p.id == id }
         return foundAssignment
     }
 
+    //Creates new item in assignment list
     override fun create(assignemnt: StudyAppModel) {
         assignemnt.id = generateRandomId()
         assignments.add(assignemnt)
         serialize()
     }
 
-//     fun delete() {
-//        assignments.clear()
-//         serialize()
-//    }
+    //Attempted delete function to clear JSON file
+     fun delete() {
+        assignments.clear()
+         serialize()
+    }
 
+    //Updates item in assignment list
     override fun update(assignemnt: StudyAppModel) {
         var foundAssignment = findOne(assignemnt.id!!)
         if (foundAssignment != null) {
@@ -57,6 +62,7 @@ class AssignmentJSONStore : StudyAppStore {
         serialize()
     }
 
+    //Logs all items in assignment list
     internal fun logAll() {
         assignments.forEach { logger.info("${it}") }
     }

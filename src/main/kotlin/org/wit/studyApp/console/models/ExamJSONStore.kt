@@ -28,6 +28,7 @@ class ExamJSONStore : StudyAppStore {
         }
     }
 
+    //Same functions as AssignmentJSONStore but works on the exam JSON file
     override fun findAll(): MutableList<StudyAppModel> {
         return exams
     }

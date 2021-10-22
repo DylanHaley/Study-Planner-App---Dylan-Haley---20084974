@@ -9,6 +9,7 @@ class MenuScreen : View("Study Planner App") {
 
     val assignmentUIController: StudyAppUIController by inject()
 
+    //Simple screen used in labs to allow user to choose a button to take them to the next screen
     override val root = form {
         setPrefSize(600.0, 400.0)
         fieldset(labelPosition = Orientation.VERTICAL) {

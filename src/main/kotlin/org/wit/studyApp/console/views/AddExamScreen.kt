@@ -11,6 +11,7 @@ class AddExamScreen : tornadofx.View("Add Exams") {
     val _date= model.bind { SimpleStringProperty() }
     val assignmentkUIController: StudyAppUIController by inject()
 
+    //Same as AddAssignment screen however allows user to input and add an exam due date to a separate JSON file
     override val root = form {
         setPrefSize(600.0, 200.0)
         fieldset(labelPosition = Orientation.VERTICAL) {

@@ -4,7 +4,6 @@ import javafx.application.Platform.runLater
 import mu.KotlinLogging
 import org.wit.studyApp.console.models.ExamJSONStore
 import org.wit.studyApp.console.models.AssignmentJSONStore
-import org.wit.studyApp.console.models.JSON_FILE
 import org.wit.studyApp.console.models.StudyAppModel
 import org.wit.studyApp.console.views.*
 import tornadofx.*
@@ -18,6 +17,10 @@ class StudyAppUIController : Controller() {
     init {
         logger.info { "Launching Study Planner TornadoFX UI App" }
     }
+
+
+    //Assignment Functions
+    // Add new assignment to the JSON file
     fun addAssignment(_title : String, _date : String){
 
         var aPlacemark = StudyAppModel(title = _title, Date = _date)
@@ -25,6 +28,7 @@ class StudyAppUIController : Controller() {
         logger.info("Added")
     }
 
+    //Load the assignments JSON file
     fun loadListAssignmentScreen() {
         runLater {
             find(MenuScreen::class).replaceWith(ListAssignmentScreen::class, sizeToScene = true, centerOnScreen = true)
@@ -32,37 +36,43 @@ class StudyAppUIController : Controller() {
         assignments.logAll()
     }
 
+    //Load the add assignment screen
     fun loadAddAssignmentScreen() {
         runLater {
             find(MenuScreen::class).replaceWith(AddAssignmentScreen::class, sizeToScene = true, centerOnScreen = true)
         }
     }
 
+    //Load delete assignment screen
     fun loadDeleteAssignmentScreen() {
         runLater {
             find(MenuScreen::class).replaceWith(DeleteAssignmentScreen::class, sizeToScene = true, centerOnScreen = true)
         }
     }
 
+    //close the add assignment screen
     fun closeAddAssignment() {
         runLater {
             find(AddAssignmentScreen::class).replaceWith(MenuScreen::class, sizeToScene = true, centerOnScreen = true)
         }
     }
 
+    //close the list assignment screen
     fun closeListAssignment() {
         runLater {
             find(ListAssignmentScreen::class).replaceWith(MenuScreen::class, sizeToScene = true, centerOnScreen = true)
         }
     }
 
+    //Attempted delete function which calls delete from AssignmentJSONStore to clear JSON file however very buggy
     fun deleteAssignment(){
-//        assignments.delete()
+        assignments.delete()
         logger.info("Deleted")
     }
 
+    //Attempted search function does not work as it errors out while trying to load search screen
     fun searchAssignments(id: Long) {
-//        assignments.findOne(id)
+        assignments.findOne(id)
     }
 
     fun loadSearchAssignmentScreen() {
@@ -78,7 +88,8 @@ class StudyAppUIController : Controller() {
     }
 
 
-    //Exam functions
+    //Exam Functions
+    //adds Exam to new JSON file
     fun addExam(_title : String, _date : String){
 
         var aPlacemark = StudyAppModel(title = _title, Date = _date)
@@ -86,18 +97,21 @@ class StudyAppUIController : Controller() {
         logger.info("Added")
     }
 
+    //Loads add exam screen
     fun loadAddExamScreen() {
         runLater {
             find(MenuScreen::class).replaceWith(AddExamScreen::class, sizeToScene = true, centerOnScreen = true)
         }
     }
 
+    //Closes add exam screen
     fun closeExamAdd() {
         runLater {
             find(AddExamScreen::class).replaceWith(MenuScreen::class, sizeToScene = true, centerOnScreen = true)
         }
     }
 
+    //Loads list exam screen
     fun loadListExamScreen() {
         runLater {
             find(MenuScreen::class).replaceWith(ListExamScreen::class, sizeToScene = true, centerOnScreen = true)
@@ -105,6 +119,7 @@ class StudyAppUIController : Controller() {
         exams.logAll()
     }
 
+    //Closes list exam screen
     fun closeListExam() {
         runLater {
             find(ListExamScreen::class).replaceWith(MenuScreen::class, sizeToScene = true, centerOnScreen = true)
